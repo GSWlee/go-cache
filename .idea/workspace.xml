@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="680040e2-df52-463c-8fe8-5012cb1e2335" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lru/lru.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lru/lru_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/byteviews.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/consistenthash/consistenthash.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/consistenthash/consistenthash_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/http.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/mycache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/mycache_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lru/lru.go" beforeDir="false" afterPath="$PROJECT_DIR$/mycache/lru/lru.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lru/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/mycache/lru/lru_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mycache" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.go test go-cache">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="go-cache" />
       <working_directory value="$PROJECT_DIR$" />
@@ -69,24 +82,46 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRemoveoldest in go-cache" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestHashing in consistenthash_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-cache" />
+      <working_directory value="$PROJECT_DIR$/mycache/consistenthash" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/mycache/consistenthash/consistenthash_test.go" />
+      <pattern value="^\QTestHashing\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test go-cache" type="GoTestRunConfiguration" factoryName="Go Test" nameIsGenerated="true">
       <module name="go-cache" />
       <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-v" />
       <framework value="gotest" />
       <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/lru/lru_test.go" />
-      <pattern value="^\QTestRemoveoldest\E$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mycache_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-cache" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/mycache_test.go" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestRemoveoldest in go-cache" />
       <item itemvalue="Go Build.go build main.go" />
+      <item itemvalue="Go Test.go test go-cache" />
+      <item itemvalue="Go Test.mycache_test.go" />
+      <item itemvalue="Go Test.TestHashing in consistenthash_test.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestHashing in consistenthash_test.go" />
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Test.TestRemoveoldest in go-cache" />
+        <item itemvalue="Go Test.mycache_test.go" />
       </list>
     </recent_temporary>
   </component>
@@ -104,43 +139,56 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="183" y="25" width="1071" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617028203979">
+    <state x="319" y="0" width="1071" height="900" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617089485443">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="183" y="25" width="1071" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1617028203979" />
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom" timestamp="1617029315294">
+    <state x="319" y="0" width="1071" height="900" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1617089485443" />
+    <state x="642" y="192" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1617088574760">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617029315294" />
-    <state width="1398" height="304" key="GridCell.Tab.0.center" timestamp="1617029315293">
+    <state x="642" y="192" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1617088574760" />
+    <state width="1398" height="293" key="GridCell.Tab.0.bottom" timestamp="1617262620539">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1617029315293" />
-    <state width="1398" height="304" key="GridCell.Tab.0.left" timestamp="1617029315292">
+    <state width="1282" height="245" key="GridCell.Tab.0.bottom/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327860" />
+    <state width="1398" height="293" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617262620539" />
+    <state width="1398" height="293" key="GridCell.Tab.0.center" timestamp="1617262620536">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1617029315292" />
-    <state width="1398" height="304" key="GridCell.Tab.0.right" timestamp="1617029315294">
+    <state width="1282" height="245" key="GridCell.Tab.0.center/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327857" />
+    <state width="1398" height="293" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1617262620536" />
+    <state width="1398" height="293" key="GridCell.Tab.0.left" timestamp="1617262620535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1617029315294" />
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1617029315536">
+    <state width="1282" height="245" key="GridCell.Tab.0.left/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327855" />
+    <state width="1398" height="293" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1617262620535" />
+    <state width="1398" height="293" key="GridCell.Tab.0.right" timestamp="1617262620537">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617029315536" />
-    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1617029315536">
+    <state width="1282" height="245" key="GridCell.Tab.0.right/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327859" />
+    <state width="1398" height="293" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1617262620537" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1617029390150">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1617029315536" />
-    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1617029315535">
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617029390150" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1617029390148">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1617029315535" />
-    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1617029315536">
+    <state width="1398" height="304" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1617029390148" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1617029390147">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1617029315536" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1617029390147" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1617029390149">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1617029390149" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1617091016985">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1617091016985" />
   </component>
 </project>
