@@ -19,19 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680040e2-df52-463c-8fe8-5012cb1e2335" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mycache/byteviews.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycache/cache.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycache/consistenthash/consistenthash.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycache/consistenthash/consistenthash_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycache/http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycache/mycache.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycache/mycache_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru/lru.go" beforeDir="false" afterPath="$PROJECT_DIR$/mycache/lru/lru.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lru/lru_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/mycache/lru/lru_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-    </list>
+    <list default="true" id="680040e2-df52-463c-8fe8-5012cb1e2335" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
