@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="680040e2-df52-463c-8fe8-5012cb1e2335" name="Default Changelist" comment="" />
+    <list default="true" id="680040e2-df52-463c-8fe8-5012cb1e2335" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mycache/peers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mycache/singleflight/singleflight.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycache/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/mycache/http.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mycache/mycache.go" beforeDir="false" afterPath="$PROJECT_DIR$/mycache/mycache.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +69,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.go test go-cache">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="go-cache" />
       <working_directory value="$PROJECT_DIR$" />
@@ -107,8 +115,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestHashing in consistenthash_test.go" />
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.TestHashing in consistenthash_test.go" />
         <item itemvalue="Go Test.mycache_test.go" />
       </list>
     </recent_temporary>
@@ -134,29 +142,33 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="319" y="0" width="1071" height="900" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1617089485443" />
+    <state x="336" y="526" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617344461459">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="336" y="526" key="#com.intellij.fileTypes.FileTypeChooser/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617344461459" />
     <state x="642" y="192" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1617088574760">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="642" y="192" key="#com.intellij.ide.macro.MacrosDialog/0.0.1440.900@0.0.1440.900" timestamp="1617088574760" />
-    <state width="1398" height="293" key="GridCell.Tab.0.bottom" timestamp="1617262620539">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1164" height="293" key="GridCell.Tab.0.bottom" timestamp="1617266960761">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="245" key="GridCell.Tab.0.bottom/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327860" />
+    <state width="1164" height="293" key="GridCell.Tab.0.bottom/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617266960761" />
     <state width="1398" height="293" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1617262620539" />
-    <state width="1398" height="293" key="GridCell.Tab.0.center" timestamp="1617262620536">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1164" height="293" key="GridCell.Tab.0.center" timestamp="1617266960750">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="245" key="GridCell.Tab.0.center/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327857" />
+    <state width="1164" height="293" key="GridCell.Tab.0.center/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617266960750" />
     <state width="1398" height="293" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1617262620536" />
-    <state width="1398" height="293" key="GridCell.Tab.0.left" timestamp="1617262620535">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1164" height="293" key="GridCell.Tab.0.left" timestamp="1617266960738">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="245" key="GridCell.Tab.0.left/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327855" />
+    <state width="1164" height="293" key="GridCell.Tab.0.left/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617266960738" />
     <state width="1398" height="293" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1617262620535" />
-    <state width="1398" height="293" key="GridCell.Tab.0.right" timestamp="1617262620537">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1164" height="293" key="GridCell.Tab.0.right" timestamp="1617266960757">
+      <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1282" height="245" key="GridCell.Tab.0.right/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617248327859" />
+    <state width="1164" height="293" key="GridCell.Tab.0.right/-1440.540.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1617266960757" />
     <state width="1398" height="293" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1617262620537" />
     <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1617029390150">
       <screen x="0" y="0" width="1440" height="900" />
@@ -178,5 +190,16 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1617091016985" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/mycache/cache.go</url>
+          <line>15</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

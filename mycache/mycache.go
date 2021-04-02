@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"sync"
+	"./singleflight"
 )
 
 type Getter interface {
@@ -20,6 +21,8 @@ type Group struct {
 	name string
 	getter Getter
 	cache Cache
+	peers PeerPicker
+	loader *singleflight.Group
 }
 
 var (
@@ -35,6 +38,7 @@ func NewGroup(name string,cacheBytes int64,getter Getter) *Group {
 		name: name,
 		getter: getter,
 		cache: Cache{maxBytes: cacheBytes},
+		loader: &singleflight.Group{},
 	}
 	groups[name]=g
 	return g
@@ -59,8 +63,22 @@ func (g *Group) Get(key string) (Byteviews,error) {
 	return g.load(key)
 }
 
-func (g *Group) load(key string) (Byteviews,error) {
-	return g.getLocally(key)
+func (g *Group) load(key string) (value Byteviews,err error) {
+	viewi,err:=g.loader.Do(key, func() (interface{}, error) {
+		if g.peers!=nil{
+			if peer,ok:=g.peers.PickPeer(key);ok{
+				if value,err=g.getFromPeer(peer,key);err==nil{
+					return value,nil
+				}
+				log.Println("[cache] Failed to get from peer",err)
+			}
+		}
+		return g.getLocally(key)
+	})
+	if err==nil{
+		return viewi.(Byteviews),nil
+	}
+	return
 }
 
 func (g *Group) getLocally(key string) (Byteviews,error) {
@@ -73,6 +91,22 @@ func (g *Group) getLocally(key string) (Byteviews,error) {
 	return value,nil
 }
 
+func (g *Group) getFromPeer(peer PeerGetter,key string) (Byteviews,error){
+	bytes,err:=peer.Get(g.name,key)
+	if err!=nil{
+		return Byteviews{},err
+	}
+	return Byteviews{b: bytes}, err
+}
+
 func (g *Group) populateCache(key string,value Byteviews)  {
 	g.cache.Add(key,value)
 }
+
+func (g *Group) RegisterPeers(peers PeerPicker)  {
+	if g.peers!=nil{
+		panic("RegisterPeerPicker called more than once")
+	}
+	g.peers=peers
+}
+
